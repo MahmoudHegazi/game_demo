@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#demo {
+ width:400px;
+ height:400px;
+ border: 2px solid gold;
+}
+html {
+  scroll-behavior: smooth;
+}
+#myDIV {
+  margin-bottom: ;
+  width: 5px;
+  height: 70px;
+  background-color: coral;
+  color: white;
+  animation: mymove 3s;
+  animation-play-state: paused;
+  
+}
+
+#myDIV1 {
+  width: 7px;
+  height: 70px;
+  background-color: red;
+  color: white;
+  animation: mymove 3s;
+  animation-play-state: play;
+  
+}
+
+@keyframes mymove {
+  30% {transform: skewY(180deg);}
+  50% {transform: skewX(180deg);}
+}
+@keyframes mymove1 {
+  40% {transform: skewX(180deg);}
+    30% {transform: skewY(180deg);}
+}
+.container1 {
+  width:50px;
+  height: 50px;
+  display: flex;
+  animation: mymove1 2s;
+  margin-left: 400px;
+  margin-top: 400px;
+   
+}
+.champcont {
+ display: flex;
+ 
+}
+#warrior {
+ animation: mymove 2s;
+ animation-play-state: play;
+
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+
+<div id="demo" onclick="moveto(event)">
+
+  
+
+
+<div id="champ">
+<img  id="warrior" src="https://www.w3schools.com/images/stickman.gif">
+<div  id="myDIV"></div>
+</div>
+
+
+
+
+</div>
+</div>
+<script>
+const champion = document.querySelector('#champ');
+const di = document.querySelector('#myDIV');
+const area = document.getElementById('demo');
+
+
+function moveto(e) {
+
+  champion.style.marginTop = '0';
+  champion.style.marginTop = e.offsetX  + 'px';
+  champion.style.marginLeft = e.offsetY  + 'px';
+  di.id = 'myDIV1';
+  champion.id = 'warrior';
+  setTimeout(function(){ 
+  di.id = 'myDIV';
+  champion.id = '';
+  }, 1990);
+
+}
+</script>
+
+</body>
+</html>
