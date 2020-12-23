@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+html {
+  scroll-behavior: smooth;
+}
+#myDIV {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: -6px;
+  border: 1px solid black;
+  width: 5px;
+  height: 70px;
+  background-color: coral;
+  color: white;
+  animation: mymove 3s;
+}
+
+@keyframes mymove {
+  30% {transform: skewY(180deg);}
+  50% {transform: skewX(180deg);}
+}
+@keyframes mymove1 {
+  40% {transform: skewX(180deg);}
+    30% {transform: skewY(180deg);}
+}
+.container1 {
+  width:50px;
+  height: 50px;
+  display: flex;
+  animation: mymove1 3s;
+  margin-left: 400px;
+  margin-top: 400px;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="container1">
+<div id="myDIV">
+  <h1></h1>
+</div>
+<img src="https://www.w3schools.com/images/stickman.gif">
+</div>
+
+
+</body>
+</html>
